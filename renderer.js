@@ -19,7 +19,7 @@ $('input[type=text]').on('keydown', function(e) {
 		
 		if ( str.match("^:!") ) {
 			str = (str.split(":!"))[1];
-			var newitem = '<span class="date">' + date + '</span><div class="box important">' + str + '</div>';
+			var newitem = '<span class="date">' + date + '</span><div class="box important"><b>' + str + '</b></div>';
 		} else {
 			var newitem = '<span class="date">' + date + '</span><div class="box">' + str + '</div>';
 		}
