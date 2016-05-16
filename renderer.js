@@ -24,11 +24,6 @@ $('input[type=text]').on('keydown', function(e) {
 			var newitem = '<span class="date">' + date + '</span><div class="box">' + str + '</div>';
 		}
 
-	if ( e.which == 13 && $(this).val() ) {
-		var date = GetTodayDate()
-		var newval = $('<div />').html($(this).val()).html()
-		var newitem = '<span class="date">' + date + '</span><div class="box">' + newval + '</div>'
-
 		localStorage.setItem(date, newitem);
 
 		$('div.box').last().after(newitem);
@@ -55,7 +50,7 @@ $(window).scroll(function(event) {
     } else {
     	$('#panel').css({ borderBottom:0 });
     }
-})
+});
 
 function getNotes() {
 	if ( localStorage.length ) {
@@ -66,5 +61,5 @@ function getNotes() {
 }
 
 $(function(){
-	getNotes()
-})
+	getNotes();
+});
