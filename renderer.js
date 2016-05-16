@@ -14,7 +14,7 @@ $('span').click(function(){
 
 $('input[type=text]').on('keydown', function(e) {
 	if ( e.which == 13 && $(this).val() ) {
-		var date = GetTodayDate(
+		var date = GetTodayDate()
 		var newval = $('<div />').html($(this).val()).html()
 		var newitem = '<span class="date">' + date + '</span><div class="box">' + newval + '</div>'
 
